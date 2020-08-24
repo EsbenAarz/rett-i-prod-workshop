@@ -20,11 +20,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: akhileshns/heroku-deploy@v3.4.6 # This is the action
-      with: 
-        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-        heroku_app_name: "esben-hello-world"
-        heroku_email: "esben.aarseth@gmail.com"
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
