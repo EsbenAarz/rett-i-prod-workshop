@@ -11,3 +11,4 @@ Please remember to fork the repo before starting.
 * `npm ci && npm run dev`
 * The "server", if you can call it that, runs on localhost:3000
 
+Update README
