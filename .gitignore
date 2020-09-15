@@ -1,4 +1,4 @@
-terraform/prod/.terraform/
+terraform/test/.terraform/
 *.tfstate
 *.tfstate.backup
 .idea/
