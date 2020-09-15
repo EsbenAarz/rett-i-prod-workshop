@@ -3,6 +3,7 @@ name: Heroku deploy
 on:
   push:
     branches:
+      - '*'
       - '!master'
 
 jobs:
