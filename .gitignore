@@ -1,3 +1,6 @@
+terraform/test/.terraform/
+*.tfstate
+*.tfstate.backup
 .idea/
 node_modules/
 dist-server/

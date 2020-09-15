@@ -13,5 +13,7 @@ function run_app {
 npm run build
 docker build -t esben.aarseth/node-web-app .
 
+
+
 run_app $1
 exit 1
