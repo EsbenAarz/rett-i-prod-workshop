@@ -4,3 +4,14 @@ export function superImportantService() {
         "to": "production and test"
     };
 }
+
+export function userService() {
+    return {
+        "users": [
+            {
+                "firstName": "Esben",
+                "lastName": "Aarseth"
+            }
+        ]
+    }
+}
