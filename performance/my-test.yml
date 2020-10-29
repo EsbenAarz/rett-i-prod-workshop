@@ -6,8 +6,8 @@ config:
         - "username"
         - "password"
   phases:
-    - duration: 120
-      arrivalRate: 100
+    - duration: 30
+      arrivalRate: 10
 scenarios:
   - flow:
       - get:
