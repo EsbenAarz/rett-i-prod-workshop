@@ -8,6 +8,8 @@ config:
   phases:
     - duration: 30
       arrivalRate: 10
+  ensure:
+    p95: 500
 scenarios:
   - flow:
       - get:
