@@ -8,20 +8,19 @@ config:
   phases:
     - duration: 30
       arrivalRate: 5
-      name: Warming up Heroku
+      name: "Warming up Heroku"
     - duration: 30
       arrivalRate: 5
       rampTo: 20
-      name: Ramp up the load
+      name: "Ramp up the load"
     - duration: 100
       arrivalRate: 20
-      name: Smash it
+      name: "Smash it"
   ensure:
     p95: 500
     maxErrorRate: 20
 scenarios:
   - flow:
-      - name: "Get JSON-objects"
       - get:
           url: "/"
           headers:
