@@ -3,11 +3,19 @@ import { superImportantService, userService } from "../controller/super-importan
 
 const router = express.Router();
 
-router.get('/', function(req, res, next) {
-    res.send(superImportantService());
+router.get('/', function(req, res) {
+    const random = Math.random() * 1000;
+    if (random >= 300 && random <= 400) {
+        res.status(429);
+        res.send(JSON.stringify({"error": "This is bad"}));
+    } else {
+        setTimeout(() => {
+            res.send(superImportantService());
+        }, random);
+    }
 });
 
-router.get('/users', function(req, res, next) {
+router.get('/users', function(req, res) {
     res.status(200);
     res.send(userService());
 });

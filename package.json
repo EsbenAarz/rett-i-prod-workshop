@@ -8,7 +8,8 @@
     "transpile": "babel ./src --out-dir dist-server",
     "clean": "rimraf dist-server",
     "build": "npm-run-all clean transpile test",
-    "dev": "NODE_ENV=development npm-run-all build start",
+    "dev": "PORT=9191 NODE_ENV=development npm-run-all build start",
+    "performance-test": "cd performance && artillery run my-test.yml && cd ..",
     "watch:dev": "nodemon",
     "test": "jest"
   },
@@ -23,6 +24,7 @@
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
+    "artillery": "^1.6.1",
     "express": "^4.17.1",
     "express-prom-bundle": "^6.1.0",
     "http-errors": "^1.8.0",

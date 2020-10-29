@@ -29,3 +29,4 @@ jobs:
           heroku_app_name: "esben-test"
           heroku_email: "esben.aarseth@gmail.com"
           usedocker: true
+      - run: npm run performance-test
